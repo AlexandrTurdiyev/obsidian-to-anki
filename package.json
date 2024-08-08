@@ -1,12 +1,23 @@
 {
   "name": "obsidian-to-anki",
   "version": "1.0.0",
+  "bin": "index.js", 
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "build": "pkg . --targets win",
+    "clean": "rimraf temp target merged.md"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "fs-extra": "^11.2.0",
+    "marked": "^13.0.3",
+    "pkg": "^5.8.1"
+  },
+  "devDependencies": {
+    "rimraf": "^6.0.1"
+  }
 }
